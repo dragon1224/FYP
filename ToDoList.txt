@@ -1,0 +1,13 @@
+Menu:
+tutorial words issue
+adjust bgm volume(too high for some part)
+
+GameLevel:
+create more levels
+fix enemy shooting and walking
+upgrade system
+UI system during gameplay(item,level up)
+SFX BGM
+difficulty
+
+GameManager(victory part)

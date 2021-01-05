@@ -176,7 +176,7 @@ PrefabInstance:
     - target: {fileID: 6979737296958116603, guid: 94d3309486d549742857b48746cd4e87,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.412
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6979737296958116603, guid: 94d3309486d549742857b48746cd4e87,
         type: 3}
@@ -238,6 +238,48 @@ PrefabInstance:
       propertyPath: girl
       value: 
       objectReference: {fileID: 758035879575764306}
+    - target: {fileID: 9045227119533721086, guid: 94d3309486d549742857b48746cd4e87,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 329251673691116615, guid: 6486143a2e6021a4ab9db9af7b14fd46,
+        type: 3}
+    - target: {fileID: 9045227119533721086, guid: 94d3309486d549742857b48746cd4e87,
+        type: 3}
+      propertyPath: walkPointRange
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045227119533721086, guid: 94d3309486d549742857b48746cd4e87,
+        type: 3}
+      propertyPath: timeBetweenAttacks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045227119533721086, guid: 94d3309486d549742857b48746cd4e87,
+        type: 3}
+      propertyPath: Bullet
+      value: 
+      objectReference: {fileID: 7518754056362471880, guid: 7e8667ee561b1a04fb64a293a213e0cc,
+        type: 3}
+    - target: {fileID: 9045227119533721086, guid: 94d3309486d549742857b48746cd4e87,
+        type: 3}
+      propertyPath: sightRange
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045227119533721086, guid: 94d3309486d549742857b48746cd4e87,
+        type: 3}
+      propertyPath: attackRange
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045227119533721086, guid: 94d3309486d549742857b48746cd4e87,
+        type: 3}
+      propertyPath: playerInSightRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045227119533721086, guid: 94d3309486d549742857b48746cd4e87,
+        type: 3}
+      propertyPath: playerInAttackRange
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94d3309486d549742857b48746cd4e87, type: 3}
 --- !u!1 &4100222148805645696 stripped
