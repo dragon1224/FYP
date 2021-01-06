@@ -5,9 +5,10 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    private NavMeshAgent agent;
+    public NavMeshAgent agent;
     private player player;
     private Vector3 previousPosition;
+    public float health;
     //public float curSpeed;
     public Transform Player;
     public LayerMask whatIsGround, whatIsPlayer;
@@ -31,11 +32,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject girl;
     [SerializeField] GameObject zombie;
 
-    void Start()
+    private void Awake()
     {
-        agent = GetComponent<NavMeshAgent>();
-        player = GameObject.FindObjectOfType<player>();
         Player = GameObject.Find("Player").transform;
+        agent = GetComponent<NavMeshAgent>();
     }
 
     void Update()
@@ -44,8 +44,8 @@ public class Enemy : MonoBehaviour
         /*navMeshAgent.SetDestination(player.transform.position);
 
         Vector3 curMove = transform.position - previousPosition;
-        curSpeed = curMove.magnitude / Time.deltaTime;  */
-        previousPosition = transform.position;
+        curSpeed = curMove.magnitude / Time.deltaTime;  
+        previousPosition = transform.position; */
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
@@ -123,5 +123,15 @@ public class Enemy : MonoBehaviour
     private void ResetAttack()
     {
         alreadyAttacked = false;
+    }
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
+    }
+    private void DestroyEnemy()
+    {
+        Destroy(gameObject);
     }
 }
