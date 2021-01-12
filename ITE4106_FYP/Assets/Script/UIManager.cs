@@ -6,12 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField]  Text scoreText, healthText, timerText ;
-    [SerializeField] Slider healthbar;
-    [SerializeField] GameObject gameOverScreen;
-    [SerializeField] GameObject lvupspeed;
-    [SerializeField] GameObject lvupbulletspeed;
-    [SerializeField] GameObject lvupbulletlife;
+    public Text scoreText, healthText, timerText ;
+    public Slider healthbar;
+    public GameObject gameOverScreen;
+    public GameObject lvupbulletspeed;
+    public GameObject lvupbulletlife;
+    public GameObject lvupspeed;
+    public GameObject lvupfp;
+    public GameObject maxhealth;
+    public GameObject menu;
     private float startTime;
     void Start()
     {
@@ -41,6 +44,19 @@ public class UIManager : MonoBehaviour
         {
             Time.timeScale = 0;
             gameOverScreen.SetActive(true);
+        }
+
+        //menu
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (menu.activeInHierarchy)
+            {
+                menu.SetActive(false);
+            }
+            else
+            {
+                menu.SetActive(true);
+            }
         }
     }
     public void Addbulletspeed()
