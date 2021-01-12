@@ -49,9 +49,12 @@ public class Enemy : MonoBehaviour
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
-        if (!playerInSightRange && !playerInAttackRange) Patroling();
-        if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-        if (playerInSightRange && !playerInAttackRange) AttackPlayer();
+        if (!playerInSightRange && !playerInAttackRange) 
+            Patroling();
+        if (playerInSightRange && !playerInAttackRange) 
+            ChasePlayer();
+        if (playerInSightRange && !playerInAttackRange) 
+            AttackPlayer();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -64,10 +67,10 @@ public class Enemy : MonoBehaviour
 
         if (other.tag == "Bullet")  //check if it hit by bullet
         {
-            GameStatus.score += 1;      //add score
+            /*GameStatus.score += 1;      //add score
             if (GameStatus.health <= 195){ 
             GameStatus.health += 5;     //add health if it is not maxed
-            }
+            }*/
             girl.SetActive(true);
             zombie.SetActive(false);
         }
