@@ -129,6 +129,11 @@ PrefabInstance:
       propertyPath: zombie
       value: 
       objectReference: {fileID: 4100222148805645696}
+    - target: {fileID: 6163244736294466078, guid: 9f84b313bddbed54c9d39cab84165647,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f84b313bddbed54c9d39cab84165647, type: 3}
 --- !u!1 &758035879575764306 stripped

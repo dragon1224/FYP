@@ -5,7 +5,7 @@ using UnityEngine;
 public class player : MonoBehaviour
 {
     Vector3 moveDirection = Vector3.zero;
-    [SerializeField] float speed = 4.0f;
+    [SerializeField] float speed = 4f;
     [SerializeField] float jumpSpeed = 6f;
     [SerializeField] float gravity = 10f;
     [SerializeField] float mouseSensitivity = 5f;
@@ -16,7 +16,7 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameStatus.playerspeed = speed;
+        speed = GameStatus.playerspeed;
         MovePlayer();                      //call function allow to update player 
     }
 
@@ -31,10 +31,11 @@ public class player : MonoBehaviour
             moveDirection *= speed;
         }
 
-        if (Input.GetButton("Jump") & (controller.isGrounded)) //allow player to jump on ground
+        //jump disable
+        /*if (Input.GetButton("Jump") & (controller.isGrounded)) //allow player to jump on ground
         {
             moveDirection.y = jumpSpeed;
-        }
+        }*/
 
         moveDirection.y -= gravity * Time.deltaTime;
         controller.Move(moveDirection * Time.deltaTime);        //allow playto move on ground
