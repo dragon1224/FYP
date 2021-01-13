@@ -7,29 +7,25 @@ public class Fire : MonoBehaviour
     Vector3 moveDirection = Vector3.zero;
     CharacterController controller;
     public Rigidbody bullet;
-    public float bulletSpeed = 10f;
+    [SerializeField] float bulletSpeed = 30f;
     // Start is called before the first frame update
 
     void Start()
     {
-        GameStatus.menuIsOn = false;
-    }
+        GameStatus.bulletspeed = bulletSpeed;
 
-    void Update()
-    {
-        bulletSpeed = GameStatus.bulletspeed;
     }
 
     // Update is called once per frame
 
-
-    void FixedUpdate()
+    
+    void Update()
     {
         //fire
-        if (Input.GetMouseButtonDown(0) & (GameStatus.menuIsOn == false))
+        if (Input.GetMouseButtonDown(0))
         {
-            shoot();   //call function allow player fire
-            GameStatus.health -= GameStatus.firecontrol;   //reduice health
+            shoot();                         //call function allow player fire
+            GameStatus.health -= GameStatus.firepower;
         }
     }
 
