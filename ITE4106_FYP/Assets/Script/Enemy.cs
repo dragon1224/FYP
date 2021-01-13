@@ -6,10 +6,8 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     public NavMeshAgent agent;
-    private player player;
     private Vector3 previousPosition;
     public float health;
-    //public float curSpeed;
     public Transform Player;
     public LayerMask whatIsGround, whatIsPlayer;
 
@@ -49,11 +47,11 @@ public class Enemy : MonoBehaviour
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
-        if (!playerInSightRange && !playerInAttackRange) 
+        if (!playerInSightRange && !playerInAttackRange)
             Patroling();
-        if (playerInSightRange && !playerInAttackRange) 
+        if (playerInSightRange && !playerInAttackRange)
             ChasePlayer();
-        if (playerInSightRange && !playerInAttackRange) 
+        if (playerInSightRange && !playerInAttackRange)
             AttackPlayer();
     }
 
@@ -67,8 +65,9 @@ public class Enemy : MonoBehaviour
 
         if (other.tag == "Bullet")  //check if it hit by bullet
         {
-            /*GameStatus.score += 1;      //add score
-            if (GameStatus.health <= 195){ 
+            GameStatus.score += 1;      //add score
+            GameStatus.currentexp += 1; //xp
+            /*if (GameStatus.health <= 195){ 
             GameStatus.health += 5;     //add health if it is not maxed
             }*/
             girl.SetActive(true);
@@ -112,22 +111,22 @@ public class Enemy : MonoBehaviour
 
         transform.LookAt(Player);
 
-        if(!alreadyAttacked)
+        if (!alreadyAttacked)
         {
             Rigidbody rb = Instantiate(Bullet, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 8f, ForceMode.Impulse);
+            rb.AddForce(transform.forward * 50f, ForceMode.Impulse);
+            rb.AddForce(transform.up * 10f, ForceMode.Impulse);
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
-        }    
+        }
     }
 
     private void ResetAttack()
     {
         alreadyAttacked = false;
     }
-    public void TakeDamage(int damage)
+    /*public void TakeDamage(int damage)
     {
         health -= damage;
 
@@ -135,6 +134,7 @@ public class Enemy : MonoBehaviour
     }
     private void DestroyEnemy()
     {
+
         Destroy(gameObject);
-    }
+    }*/
 }

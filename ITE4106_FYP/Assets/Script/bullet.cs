@@ -5,15 +5,13 @@ using UnityEngine;
 public class bullet : MonoBehaviour
 {
     private bullet bul;
-    private float lifetime = 4f;
+    public float lifetime = 1f;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        GameStatus.bulletlife = lifetime;
-    }
+    
     private void Awake()
     {
+        lifetime = GameStatus.bulletlife;
         Destroy(gameObject, lifetime); // destroy gameObject that script is attached to
     }
 }

@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!136 &8655298635836120671
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6979737296958184425}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.8096094
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.7723527, z: 0}
 --- !u!114 &9045227119533721086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,9 +26,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb605ebfe6cd23745a3d201223dddd17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
+  agent: {fileID: 5379658756099571259}
   health: 5
-  Player: {fileID: 0}
+  Player: {fileID: 329251673691116615, guid: 6486143a2e6021a4ab9db9af7b14fd46, type: 3}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 512
@@ -29,8 +43,8 @@ MonoBehaviour:
   attackRange: 12
   playerInSightRange: 0
   playerInAttackRange: 0
-  girl: {fileID: 0}
-  zombie: {fileID: 0}
+  girl: {fileID: 1344842257452604233, guid: 9f84b313bddbed54c9d39cab84165647, type: 3}
+  zombie: {fileID: 6979737296958184425}
 --- !u!1001 &6979737296958225431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45,6 +59,10 @@ PrefabInstance:
     - target: {fileID: 108542, guid: 14fb53f2cd63dc748a001cc7b31bf21d, type: 3}
       propertyPath: m_TagString
       value: enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 108542, guid: 14fb53f2cd63dc748a001cc7b31bf21d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 437996, guid: 14fb53f2cd63dc748a001cc7b31bf21d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -99,12 +117,24 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2061363358302890724, guid: 14fb53f2cd63dc748a001cc7b31bf21d,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1538253553054290472, guid: 14fb53f2cd63dc748a001cc7b31bf21d, type: 3}
+    - {fileID: 2061363358302890724, guid: 14fb53f2cd63dc748a001cc7b31bf21d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 14fb53f2cd63dc748a001cc7b31bf21d, type: 3}
 --- !u!1 &6979737296958184425 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 108542, guid: 14fb53f2cd63dc748a001cc7b31bf21d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6979737296958225431}
+  m_PrefabAsset: {fileID: 0}
+--- !u!195 &5379658756099571259 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 3059458405092491820, guid: 14fb53f2cd63dc748a001cc7b31bf21d,
     type: 3}
   m_PrefabInstance: {fileID: 6979737296958225431}
   m_PrefabAsset: {fileID: 0}
