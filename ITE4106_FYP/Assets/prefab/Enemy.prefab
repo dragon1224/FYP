@@ -109,16 +109,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 6011684010891725512, guid: 9f84b313bddbed54c9d39cab84165647,
-        type: 3}
-      propertyPath: m_Radius
-      value: 0.6539564
-      objectReference: {fileID: 0}
-    - target: {fileID: 6011684010891725512, guid: 9f84b313bddbed54c9d39cab84165647,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 0.7260436
-      objectReference: {fileID: 0}
     - target: {fileID: 6163244736294466078, guid: 9f84b313bddbed54c9d39cab84165647,
         type: 3}
       propertyPath: girl
@@ -220,21 +210,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 6979737296958184425, guid: 94d3309486d549742857b48746cd4e87,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8655298635836120671, guid: 94d3309486d549742857b48746cd4e87,
-        type: 3}
-      propertyPath: m_Height
-      value: 1.812283
-      objectReference: {fileID: 0}
-    - target: {fileID: 8655298635836120671, guid: 94d3309486d549742857b48746cd4e87,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 0.7277825
-      objectReference: {fileID: 0}
     - target: {fileID: 9045227119533721086, guid: 94d3309486d549742857b48746cd4e87,
         type: 3}
       propertyPath: zombie
@@ -244,8 +219,7 @@ PrefabInstance:
         type: 3}
       propertyPath: girl
       value: 
-      objectReference: {fileID: 1344842257452604233, guid: 9f84b313bddbed54c9d39cab84165647,
-        type: 3}
+      objectReference: {fileID: 758035879575764306}
     - target: {fileID: 9045227119533721086, guid: 94d3309486d549742857b48746cd4e87,
         type: 3}
       propertyPath: Player
@@ -255,12 +229,12 @@ PrefabInstance:
     - target: {fileID: 9045227119533721086, guid: 94d3309486d549742857b48746cd4e87,
         type: 3}
       propertyPath: walkPointRange
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 9045227119533721086, guid: 94d3309486d549742857b48746cd4e87,
         type: 3}
       propertyPath: timeBetweenAttacks
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9045227119533721086, guid: 94d3309486d549742857b48746cd4e87,
         type: 3}
@@ -288,11 +262,6 @@ PrefabInstance:
       propertyPath: playerInAttackRange
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9045227119533721086, guid: 94d3309486d549742857b48746cd4e87,
-        type: 3}
-      propertyPath: agent
-      value: 
-      objectReference: {fileID: 1338566791829483602}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94d3309486d549742857b48746cd4e87, type: 3}
 --- !u!1 &4100222148805645696 stripped
@@ -304,12 +273,6 @@ GameObject:
 --- !u!4 &4100222148805188754 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6979737296958116603, guid: 94d3309486d549742857b48746cd4e87,
-    type: 3}
-  m_PrefabInstance: {fileID: 6357930683708673641}
-  m_PrefabAsset: {fileID: 0}
---- !u!195 &1338566791829483602 stripped
-NavMeshAgent:
-  m_CorrespondingSourceObject: {fileID: 5379658756099571259, guid: 94d3309486d549742857b48746cd4e87,
     type: 3}
   m_PrefabInstance: {fileID: 6357930683708673641}
   m_PrefabAsset: {fileID: 0}

@@ -47,30 +47,30 @@ public class Enemy : MonoBehaviour
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
-        if (!playerInSightRange && !playerInAttackRange)
+        if (!playerInSightRange && !playerInAttackRange) 
             Patroling();
-        if (playerInSightRange && !playerInAttackRange)
+        if (playerInSightRange && !playerInAttackRange) 
             ChasePlayer();
-        if (playerInSightRange && !playerInAttackRange)
+        if (playerInSightRange && !playerInAttackRange) 
             AttackPlayer();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")  //check if it hit player
+        /*if (other.tag == "Player")  //check if it hit player
         {
             GameStatus.health -= 25;    //decrease player health
             Destroy(gameObject);        //self-destruct
-        }
+        }*/
 
         if (other.tag == "Bullet")  //check if it hit by bullet
         {
-            GameStatus.score += 1;      //add score
+            /*GameStatus.score += 1;      //add score
             GameStatus.currentexp += 1; //xp
-            /*if (GameStatus.health <= 195){ 
+            if (GameStatus.health <= 195){ 
             GameStatus.health += 5;     //add health if it is not maxed
             }*/
-            girl.SetActive(true);
+        girl.SetActive(true);
             zombie.SetActive(false);
         }
     }
@@ -111,7 +111,7 @@ public class Enemy : MonoBehaviour
 
         transform.LookAt(Player);
 
-        if (!alreadyAttacked)
+        if(!alreadyAttacked)
         {
             Rigidbody rb = Instantiate(Bullet, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * 50f, ForceMode.Impulse);
@@ -119,7 +119,7 @@ public class Enemy : MonoBehaviour
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
-        }
+        }    
     }
 
     private void ResetAttack()
