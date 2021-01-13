@@ -77602,6 +77602,12 @@ PrefabInstance:
       propertyPath: sightRange
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 2719314774952938391, guid: e56f56fef2d7ca846b4cc690ea59a790,
+        type: 3}
+      propertyPath: Bullet
+      value: 
+      objectReference: {fileID: 2435651103267260855, guid: 29d16a21c4865814288a8ff8e1950688,
+        type: 3}
     - target: {fileID: 9045227120584889933, guid: e56f56fef2d7ca846b4cc690ea59a790,
         type: 3}
       propertyPath: m_Name
@@ -98378,7 +98384,7 @@ PrefabInstance:
         type: 3}
       propertyPath: bullet
       value: 
-      objectReference: {fileID: 5883090890527400074, guid: 29d16a21c4865814288a8ff8e1950688,
+      objectReference: {fileID: 1746902711820048629, guid: 7e8667ee561b1a04fb64a293a213e0cc,
         type: 3}
     - target: {fileID: 329251674954733550, guid: 6486143a2e6021a4ab9db9af7b14fd46,
         type: 3}
