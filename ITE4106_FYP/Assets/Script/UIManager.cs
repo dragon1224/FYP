@@ -25,7 +25,7 @@ public class UIManager : MonoBehaviour
         GameStatus.score = 0;
         GameStatus.menuIsOn = false;
         GameStatus.lv = 1;
-        GameStatus.currentexp = 5;
+        GameStatus.currentexp = 0;
         GameStatus.maxexp = 5;
         Time.timeScale = 1f;
         startTime = Time.time;
